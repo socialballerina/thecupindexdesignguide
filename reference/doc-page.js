@@ -20,19 +20,19 @@
 
   function baseCss() {
     var css = [
-      'doc-page{display:block;background:var(--doc-desk,#DCCB9F);min-height:100vh;',
+      'doc-page{display:block;background:var(--doc-desk,#DCCB9F);min-height:100vh;overflow-x:auto;',
         'padding:var(--doc-gap,40px) 0 calc(var(--doc-gap,40px) * 2);box-sizing:border-box;',
         '--doc-w:816px;--doc-h:1056px}',
       'doc-page>.page{width:var(--doc-w);height:var(--doc-h);margin:0 auto var(--doc-gap,40px);',
         'overflow:hidden;position:relative;box-sizing:border-box;',
         'box-shadow:0 1px 2px rgba(58,26,14,0.16),0 12px 34px rgba(58,26,14,0.14)}',
       'doc-page>.page:last-child{margin-bottom:0}',
-      /* Narrow viewports scale the whole sheet down instead of overflowing.
-         The negative margin absorbs the space a transform leaves behind. */
-      'doc-page>.page{transform:scale(var(--doc-scale,1));transform-origin:top center}',
-      'doc-page>.page{margin-bottom:calc(var(--doc-gap,40px) + var(--doc-h) * (var(--doc-scale,1) - 1))}',
+      /* Narrow viewports shrink the whole sheet instead of overflowing. This is
+         zoom rather than transform:scale because zoom shrinks the layout box
+         too, so the page stops scrolling sideways and stays centred. */
+      'doc-page>.page{zoom:var(--doc-scale,1)}',
       '@media print{doc-page{background:none;padding:0;min-height:0}',
-        'doc-page>.page{box-shadow:none;margin:0;transform:none;break-after:page;page-break-after:always}',
+        'doc-page>.page{box-shadow:none;margin:0;zoom:1;break-after:page;page-break-after:always}',
         'doc-page>.page:last-child{break-after:auto;page-break-after:auto}}'
     ];
     for (var k in SIZES) {
