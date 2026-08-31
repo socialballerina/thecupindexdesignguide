@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<div style="display:inline-flex">
+  <sc-if value="{{ stacked }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-direction:column;align-items:center;font-size:{{ size }}px;color:{{ ink }};line-height:1">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:0.17em;letter-spacing:0.42em;text-transform:uppercase;padding-left:0.42em;line-height:1">The</div>
+      <span style="font-family:Satoshi,sans-serif;font-weight:700;font-size:1em;letter-spacing:-0.03em;line-height:0.9;margin-top:0.01em">Cup</span>
+      <div style="display:flex;align-items:center;gap:0.01em;margin-top:0.19em;font-family:Saira,sans-serif;font-weight:500;font-size:0.78em;letter-spacing:0.13em;text-transform:uppercase;line-height:1">
+        <span style="letter-spacing:0.13em;margin-right:-0.09em">Inde</span>
+        <svg viewBox="0 0 200 200" style="width:1.06em;height:1.06em;display:block" fill="none">
+          <g stroke="{{ ink }}" strokeWidth="{{ gsw }}" strokeLinejoin="round">
+            <polygon points="190,100 145,178 55,178 10,100 55,22 145,22"></polygon>
+            <path d="M190 100 L10 100 M145 178 L55 22 M55 178 L145 22" strokeOpacity="0.32"></path>
+          </g>
+          <polygon points="181,100 127.9,148.3 75.25,142.9 28,100 68.5,45.4 138.25,33.75" fill="{{ accent }}" fillOpacity="0.18" stroke="{{ accent }}" strokeWidth="{{ gsw }}" strokeLinejoin="round"></polygon>
+          <circle cx="181" cy="100" r="13" fill="{{ accent }}" stroke="none"></circle>
+        </svg>
+      </div>
+    </div>
+  </sc-if>
+  <sc-if value="{{ horizontal }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;align-items:center;font-size:{{ size }}px;color:{{ ink }};line-height:1">
+      <span style="font-family:Satoshi,sans-serif;font-weight:700;font-size:1em;letter-spacing:-0.03em;padding-right:0.18em">Cup</span>
+      <div style="display:flex;align-items:center;gap:0.01em;font-family:Saira,sans-serif;font-weight:500;font-size:0.78em;letter-spacing:0.13em;text-transform:uppercase">
+        <span style="letter-spacing:0.13em;margin-right:-0.09em">Inde</span>
+        <svg viewBox="0 0 200 200" style="width:1.06em;height:1.06em;display:block" fill="none">
+          <g stroke="{{ ink }}" strokeWidth="{{ gsw }}" strokeLinejoin="round">
+            <polygon points="190,100 145,178 55,178 10,100 55,22 145,22"></polygon>
+            <path d="M190 100 L10 100 M145 178 L55 22 M55 178 L145 22" strokeOpacity="0.32"></path>
+          </g>
+          <polygon points="181,100 127.9,148.3 75.25,142.9 28,100 68.5,45.4 138.25,33.75" fill="{{ accent }}" fillOpacity="0.18" stroke="{{ accent }}" strokeWidth="{{ gsw }}" strokeLinejoin="round"></polygon>
+          <circle cx="181" cy="100" r="13" fill="{{ accent }}" stroke="none"></circle>
+        </svg>
+      </div>
+    </div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:420,&quot;height&quot;:260},&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;stacked&quot;,&quot;horizontal&quot;],&quot;default&quot;:&quot;stacked&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;size&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:64,&quot;min&quot;:16,&quot;max&quot;:220,&quot;unit&quot;:&quot;px&quot;,&quot;tsType&quot;:&quot;number&quot;},&quot;ink&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#3B2A20&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#C1622D&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;gsw&quot;:{&quot;editor&quot;:&quot;float&quot;,&quot;default&quot;:5,&quot;min&quot;:2,&quot;max&quot;:10,&quot;step&quot;:0.5,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const layout = this.props.layout ?? 'stacked';
+    return {
+      size: this.props.size ?? 64,
+      ink: this.props.ink ?? '#3B2A20',
+      accent: this.props.accent ?? '#C1622D',
+      gsw: this.props.gsw ?? 5,
+      stacked: layout === 'stacked',
+      horizontal: layout === 'horizontal'
+    };
+  }
+}
+</script>
+</body>
+</html>

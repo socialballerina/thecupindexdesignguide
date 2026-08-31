@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #E7E1D6; }
+    a { color: #C1622D; text-decoration: none; }
+    a:hover { color: #3B2A20; }
+  </style>
+</helmet>
+
+<div style="width:1360px;margin:0 auto;padding:64px 56px 96px;background:#F5EFE6;color:#3B2A20;font-family:Satoshi,sans-serif;display:flex;flex-direction:column;gap:40px">
+
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid rgba(59,42,32,0.22);padding-bottom:18px">
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.34em;text-transform:uppercase">Colour scheme study · ranked</div>
+      <div style="font-family:Satoshi,sans-serif;font-weight:700;font-size:26px;letter-spacing:-0.02em">Eight palettes, same logo, ranked best to worst for an instrument brand.</div>
+    </div>
+    <div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.6;text-align:right;max-width:19em;line-height:1.6">Each row: palette · primary lockup · avatar · scorecard</div>
+  </div>
+
+  <sc-for list="{{ schemes }}" as="s" hint-placeholder-count="8">
+    <div style="display:grid;grid-template-columns:250px 1fr 330px;border:1px solid rgba(59,42,32,0.18)">
+      <div style="padding:24px 22px;display:flex;flex-direction:column;gap:16px;border-right:1px solid rgba(59,42,32,0.14)">
+        <div style="display:flex;align-items:baseline;gap:12px">
+          <div style="font-family:Saira,sans-serif;font-weight:600;font-size:26px;letter-spacing:0.04em;color:#C1622D">{{ s.rank }}</div>
+          <div style="font-family:Saira,sans-serif;font-weight:500;font-size:12px;letter-spacing:0.22em;text-transform:uppercase;line-height:1.4">{{ s.name }}</div>
+        </div>
+        <div style="display:flex;gap:8px">
+          <div style="width:34px;height:34px;border:1px solid rgba(59,42,32,0.25);background:{{ s.ground }}"></div>
+          <div style="width:34px;height:34px;background:{{ s.ink }}"></div>
+          <div style="width:34px;height:34px;background:{{ s.accent }}"></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:3px;font-family:Saira,sans-serif;font-size:10px;letter-spacing:0.16em;text-transform:uppercase;opacity:0.7">
+          <div>{{ s.groundName }}</div>
+          <div>{{ s.inkName }}</div>
+          <div>{{ s.accentName }}</div>
+        </div>
+        <div style="font-size:12.5px;line-height:1.5;opacity:0.85;text-wrap:pretty">{{ s.note }}</div>
+      </div>
+
+      <div style="background:{{ s.ground }};display:flex;align-items:center;justify-content:center;padding:44px">
+        <dc-import name="LogoLockup" layout="stacked" size="72" ink="{{ s.ink }}" accent="{{ s.accent }}" gsw="5" hint-size="240px,170px"></dc-import>
+      </div>
+
+      <div style="background:{{ s.ground }};display:flex;align-items:center;gap:22px;padding:26px 24px;border-left:1px solid rgba(59,42,32,0.14)">
+        <div style="width:92px;height:92px;border-radius:50%;background:{{ s.ink }};display:flex;align-items:center;justify-content:center;padding:19px;box-sizing:border-box;flex:none">
+          <dc-import name="RadarMark" ink="{{ s.ground }}" accent="{{ s.accent }}" sw="5" fillOpacity="0.2" gridOpacity="0.3" hint-size="100%,100%"></dc-import>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:10px;flex:1">
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:2px">
+            <div style="font-family:Satoshi,sans-serif;font-weight:700;font-size:13.5px;letter-spacing:-0.01em;white-space:nowrap;color:{{ s.ink }}">Fernweh Coffee</div>
+            <div style="font-family:Saira,sans-serif;font-weight:500;font-size:24px;letter-spacing:0.05em;color:{{ s.accent }};line-height:1">8.4</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="display:flex;align-items:center;gap:10px"><div style="font-family:Saira,sans-serif;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;width:54px;color:{{ s.ink }};opacity:0.7">Latte</div><div style="flex:1;height:4px;background:rgba(0,0,0,0.12)"><div style="width:92%;height:4px;background:{{ s.accent }}"></div></div></div>
+            <div style="display:flex;align-items:center;gap:10px"><div style="font-family:Saira,sans-serif;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;width:54px;color:{{ s.ink }};opacity:0.7">Vibe</div><div style="flex:1;height:4px;background:rgba(0,0,0,0.12)"><div style="width:78%;height:4px;background:{{ s.ink }};opacity:0.65"></div></div></div>
+            <div style="display:flex;align-items:center;gap:10px"><div style="font-family:Saira,sans-serif;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;width:54px;color:{{ s.ink }};opacity:0.7">Food</div><div style="flex:1;height:4px;background:rgba(0,0,0,0.12)"><div style="width:55%;height:4px;background:{{ s.ink }};opacity:0.65"></div></div></div>
+            <div style="display:flex;align-items:center;gap:10px"><div style="font-family:Saira,sans-serif;font-size:9px;letter-spacing:0.18em;text-transform:uppercase;width:54px;color:{{ s.ink }};opacity:0.7">Repeat</div><div style="flex:1;height:4px;background:rgba(0,0,0,0.12)"><div style="width:85%;height:4px;background:{{ s.ink }};opacity:0.65"></div></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-for>
+
+  <div style="display:flex;flex-direction:column;gap:14px;border-top:1px solid rgba(59,42,32,0.22);padding-top:24px">
+    <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">How these were judged</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;font-size:13.5px;line-height:1.55">
+      <div>Ink must hold a 32px mark and body copy on its ground; mid-tone darks were deepened until they did, and that deepening is noted per row.</div>
+      <div>The accent has one job: mark data. A palette whose accent competes with the ink for attention scores lower.</div>
+      <div>Warm-cool tension beats warm-warm: it reads as instrumentation rather than café nostalgia.</div>
+    </div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1360,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      schemes: [
+        { rank: '01', name: 'Oat Silk · Cocoa Dust · Chestnut', ground: '#F3E6D8', ink: '#4E3D42', accent: '#964B34',
+          groundName: 'Ground #F3E6D8', inkName: 'Ink #4E3D42', accentName: 'Accent #964B34',
+          note: 'Cross-scheme. Cocoa Dust reads near-black with a plum cast, sharper and more modern than espresso, and Chestnut is a cleaner accent than terracotta. Highest contrast in the set.' },
+        { rank: '02', name: 'Apricot Cream · Midnight Violet · Golden Apricot', ground: '#F7EDDF', ink: '#290024', accent: '#D4954D',
+          groundName: 'Ground #F7EDDF (added)', inkName: 'Ink #290024', accentName: 'Accent #D4954D',
+          note: 'Midnight Violet is the darkest ink offered and holds a 20px mark effortlessly; Golden Apricot is a warm, legible accent on both ink and ground. Needs a light ground added, the source trio has none.' },
+        { rank: '03', name: 'Chalk Cream · Cocoa Dust · Mint Julep', ground: '#EFE9DC', ink: '#4E3D42', accent: '#8FCFCB',
+          groundName: 'Ground #EFE9DC', inkName: 'Ink #4E3D42', accentName: 'Accent #8FCFCB',
+          note: 'Cross-scheme. A cool mint accent on warm neutral ink is the most instrument-like combination here, the data colour stops looking like coffee entirely.' },
+        { rank: '04', name: 'Chalk Cream · Olive Smoke · Chestnut', ground: '#EFE9DC', ink: '#5B584F', accent: '#964B34',
+          groundName: 'Ground #EFE9DC', inkName: 'Ink #5B584F (deepened)', accentName: 'Accent #964B34',
+          note: 'Closest to a performance-tech brand. Olive Smoke as supplied (#706C61) is too light for ink, so it is deepened one step to hold small type.' },
+        { rank: '05', name: 'Hint of Mint · Argan Oil', ground: '#D8EBE6', ink: '#4A3527', accent: '#8B593E',
+          groundName: 'Ground #D8EBE6', inkName: 'Ink #4A3527 (deepened)', accentName: 'Accent #8B593E',
+          note: 'A cool ground is the boldest move in the set and photographs well as an avatar. Argan Oil is too light to be the ink alone, so it becomes the accent.' },
+        { rank: '06', name: 'Chalk Cream · Plum Truffle · Mint Julep', ground: '#EFE9DC', ink: '#675657', accent: '#9AD5D1',
+          groundName: 'Ground #EFE9DC', inkName: 'Ink #675657', accentName: 'Accent #9AD5D1',
+          note: 'Cross-scheme. Softer and more editorial. Plum Truffle is a pleasant ink but sits low on contrast, so small marks lose definition.' },
+        { rank: '07', name: 'Minted Sage · Faded Chestnut', ground: '#B6CFB9', ink: '#4C3F33', accent: '#826C57',
+          groundName: 'Ground #B6CFB9', inkName: 'Ink #4C3F33 (deepened)', accentName: 'Accent #826C57',
+          note: 'The sage ground is saturated enough to become the brand itself, and the chestnut accent is too close to the ink to mark data clearly.' },
+        { rank: '08', name: 'Vanilla · Chestnut', ground: '#E9DF9E', ink: '#4A3125', accent: '#964B34',
+          groundName: 'Ground #E9DF9E', inkName: 'Ink #4A3125', accentName: 'Accent #964B34',
+          note: 'Handsome but retro, the yellow ground pushes the brand toward 1970s packaging rather than measurement.' },
+        { rank: '09', name: 'Honey · Burgundy', ground: '#FFE4A1', ink: '#5E2320', accent: '#97322D',
+          groundName: 'Ground #FFE4A1', inkName: 'Ink #5E2320 (deepened)', accentName: 'Accent #97322D',
+          note: 'Highest energy, lowest discipline. Ink and accent are the same hue family, so the score stops standing out, and the ground is loud at avatar size.' },
+        { rank: '08a', name: 'Chestnut field · Vanilla ink', ground: '#964B34', ink: '#F1E7C4', accent: '#E9DF9E',
+          groundName: 'Ground #964B34', inkName: 'Ink #F1E7C4', accentName: 'Accent #E9DF9E',
+          note: 'Inverted: chestnut becomes the field and vanilla the ink. Reads far more confident than vanilla-as-ground, and the mark gains weight, but it commits the brand to a dark surface everywhere.' },
+        { rank: '08b', name: 'Vanilla · Midnight Violet · Chestnut', ground: '#F1EBC8', ink: '#290024', accent: '#964B34',
+          groundName: 'Ground #F1EBC8', inkName: 'Ink #290024', accentName: 'Accent #964B34',
+          note: 'Cross-scheme rescue of the vanilla ground: with a violet-black ink instead of brown, the yellow stops reading 1970s and starts reading laboratory notebook.' },
+        { rank: '09a', name: 'Cream · Burgundy · Deep Honey', ground: '#F7F0E4', ink: '#5E2320', accent: '#D9A03C',
+          groundName: 'Ground #F7F0E4', inkName: 'Ink #5E2320', accentName: 'Accent #D9A03C',
+          note: 'Honey demoted from ground to accent and darkened to #D9A03C so it clears on cream. Burgundy ink is genuinely distinctive, the strongest version of this pair.' },
+        { rank: '09b', name: 'Burgundy field · Honey ink', ground: '#97322D', ink: '#FFE4A1', accent: '#FFE4A1',
+          groundName: 'Ground #97322D', inkName: 'Ink #FFE4A1', accentName: 'Accent #FFE4A1',
+          note: 'Reversed and mono: one colour on one field. The most graphic option in the whole study and unmistakable as an avatar, though it leaves no separate data colour.' },
+        { rank: '08a-i', name: 'Chestnut field · Vanilla ink · Mint data', ground: '#964B34', ink: '#F1E7C4', accent: '#8FCFCB',
+          groundName: 'Ground #964B34', inkName: 'Ink #F1E7C4', accentName: 'Accent #8FCFCB',
+          note: '08a with a cool mint data colour. Keeps the warm inverted field but the accent finally separates from the ink, the clearest of these three.' },
+        { rank: '08a-ii', name: 'Chestnut field · Vanilla ink · Midnight data', ground: '#964B34', ink: '#F1E7C4', accent: '#290024',
+          groundName: 'Ground #964B34', inkName: 'Ink #F1E7C4', accentName: 'Accent #290024',
+          note: '08a with violet-black as the data colour. Darkest possible separation from the vanilla ink; scores read as stamped rather than highlighted.' },
+        { rank: '08a-iii', name: 'Chestnut field · Vanilla ink · Deep honey data', ground: '#964B34', ink: '#F1E7C4', accent: '#D9A03C',
+          groundName: 'Ground #964B34', inkName: 'Ink #F1E7C4', accentName: 'Accent #D9A03C',
+          note: '08a staying all-warm: deep honey is saturated enough to part from the vanilla ink while keeping the original mood intact.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

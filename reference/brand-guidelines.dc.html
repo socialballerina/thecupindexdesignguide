@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; }
+    doc-page:not(:defined) { visibility: hidden; }
+    a { color: #D9A03C; text-decoration: none; }
+    a:hover { color: #964B34; }
+  </style>
+  <script src="./doc-page.js"></script>
+</helmet>
+
+<doc-page size="letter">
+
+  <section class="page" data-screen-label="01 Cover" style="background:#964B34;color:#F1E7C4;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(241,231,196,0.7)">
+      <div>Brand Guidelines</div>
+      <div>Version 1.0 · August 2026</div>
+    </div>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:56px">
+      <dc-import name="LogoLockup" layout="stacked" size="130" ink="#F1E7C4" accent="#D9A03C" gsw="5" hint-size="360px,240px"></dc-import>
+      <div style="width:120px;height:1px;background:rgba(241,231,196,0.35)"></div>
+      <div style="max-width:420px;text-align:center;font-size:15px;line-height:1.6;color:rgba(241,231,196,0.82)">Six axes. One score. A faceless, data-driven index of the cafés worth your morning.</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;font-family:Saira,sans-serif;font-weight:400;font-size:10.5px;letter-spacing:0.26em;text-transform:uppercase;color:rgba(241,231,196,0.6)">
+      <div>Latte</div><div>Vibe</div><div>Food</div><div>Price</div><div>Location</div><div>Repeat</div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="02 Brand" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:34px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>01 · The brand</div><div style="opacity:0.55">02</div>
+    </div>
+    <div style="font-family:Satoshi,sans-serif;font-weight:700;font-size:34px;line-height:1.18;letter-spacing:-0.025em;max-width:15em;text-wrap:pretty">Human warmth, measured with instruments.</div>
+    <div style="font-size:15px;line-height:1.6;max-width:34em;text-wrap:pretty">The Cup Index reviews cafés without a face, a personality, or a favourite barista. Every venue is scored on the same six axes and plotted on the same hexagon, so two cafés three continents apart can be compared at a glance. The brand should feel like a measuring instrument that happens to like coffee, precise first, warm second.</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px 40px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">We are</div>
+        <div style="font-size:14.5px;line-height:1.55">Systematic · comparative · calm · legible · quietly opinionated through data.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">We are not</div>
+        <div style="font-size:14.5px;line-height:1.55">Cosy · nostalgic · influencer-led · hand-lettered · never "third-wave" as a personality.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:16px;margin-top:auto">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">The six axes</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(150,75,52,0.18)">
+        <div style="background:#F1E7C4;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:10px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C">01</span><span style="font-family:Saira,sans-serif;font-weight:500;font-size:14px;letter-spacing:0.14em;text-transform:uppercase">Latte</span></div>
+          <div style="font-size:13.5px;line-height:1.5;opacity:0.8">Chestnut quality, milk texture, temperature, consistency across two visits.</div>
+        </div>
+        <div style="background:#F1E7C4;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:10px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C">02</span><span style="font-family:Saira,sans-serif;font-weight:500;font-size:14px;letter-spacing:0.14em;text-transform:uppercase">Vibe</span></div>
+          <div style="font-size:13.5px;line-height:1.5;opacity:0.8">Light, sound level, seating density, how long you can stay before it turns.</div>
+        </div>
+        <div style="background:#F1E7C4;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:10px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C">03</span><span style="font-family:Saira,sans-serif;font-weight:500;font-size:14px;letter-spacing:0.14em;text-transform:uppercase">Food</span></div>
+          <div style="font-size:13.5px;line-height:1.5;opacity:0.8">Kitchen range and execution, not ambition. A perfect toastie scores.</div>
+        </div>
+        <div style="background:#F1E7C4;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:10px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C">04</span><span style="font-family:Saira,sans-serif;font-weight:500;font-size:14px;letter-spacing:0.14em;text-transform:uppercase">Price</span></div>
+          <div style="font-size:13.5px;line-height:1.5;opacity:0.8">Value per visit, never cheapness. Expensive and worth it scores high.</div>
+        </div>
+        <div style="background:#F1E7C4;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:10px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C">05</span><span style="font-family:Saira,sans-serif;font-weight:500;font-size:14px;letter-spacing:0.14em;text-transform:uppercase">Location</span></div>
+          <div style="font-size:13.5px;line-height:1.5;opacity:0.8">Access, walkability, and whether the street outside earns a window seat.</div>
+        </div>
+        <div style="background:#F1E7C4;padding:16px 18px;display:flex;flex-direction:column;gap:6px">
+          <div style="display:flex;gap:10px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C">06</span><span style="font-family:Saira,sans-serif;font-weight:500;font-size:14px;letter-spacing:0.14em;text-transform:uppercase">Repeat</span></div>
+          <div style="font-size:13.5px;line-height:1.5;opacity:0.8">Would we come back inside 14 days? The axis that overrules charm.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="03 Logo anatomy" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:24px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>02 · Logo anatomy</div><div style="opacity:0.55">03</div>
+    </div>
+    <div style="font-family:Satoshi,sans-serif;font-weight:700;font-size:28px;letter-spacing:-0.02em">The radar is a letter.</div>
+    <div style="font-size:15px;line-height:1.6;max-width:34em;text-wrap:pretty">The mark is a flat-top hexagonal radar grid: six axes, one half-scale ring, and a plotted six-point data shape with the Latte vertex called out as a solid dot. In the wordmark it substitutes for the X of INDEX, the three axis spokes read as the crossing strokes of the letter, so the mark and the type are the same object.</div>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center">
+      <div style="border:1px solid rgba(150,75,52,0.18);padding:26px;display:flex;align-items:center;justify-content:center">
+        <div style="width:100%;max-width:210px">
+          <dc-import name="RadarMark" ink="#964B34" accent="#D9A03C" sw="3" fillOpacity="0.16" gridOpacity="0.34" hint-size="100%,210px"></dc-import>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C;min-width:22px">01</span><div style="font-size:13.5px;line-height:1.5">Outer hexagon = the 10-point ceiling of every axis. Flat-top orientation only.</div></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C;min-width:22px">02</span><div style="font-size:13.5px;line-height:1.5">Inner ring at 50% scale, drawn at 34% stroke opacity, the reference grid.</div></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C;min-width:22px">03</span><div style="font-size:13.5px;line-height:1.5">Three full-width spokes through the centre define the six axes and the X-form.</div></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C;min-width:22px">04</span><div style="font-size:13.5px;line-height:1.5">Data shape in deep honey at 18% fill. The plotted polygon is fixed in the logo, it is never re-plotted per café.</div></div>
+        <div style="display:flex;gap:14px;align-items:baseline"><span style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;color:#D9A03C;min-width:22px">05</span><div style="font-size:13.5px;line-height:1.5">Solid vertex dot at the Latte axis, the only filled element in the mark.</div></div>
+      </div>
+    </div>
+    <div style="border:1px solid rgba(150,75,52,0.18);padding:30px 40px;display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:auto">
+      <dc-import name="LogoLockup" layout="stacked" size="68" ink="#964B34" accent="#D9A03C" gsw="5" hint-size="240px,160px"></dc-import>
+      <div style="font-family:Saira,sans-serif;font-weight:400;font-size:10.5px;letter-spacing:0.24em;text-transform:uppercase;opacity:0.6">THE sits on the cap line of Cup · INDEX is set at 78% of Cup · glyph width 1.06 × cap height</div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="04 Lockups" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>03 · Lockups</div><div style="opacity:0.55">04</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);height:220px;display:flex;align-items:center;justify-content:center">
+          <dc-import name="LogoLockup" layout="stacked" size="72" ink="#964B34" accent="#D9A03C" gsw="5" hint-size="240px,170px"></dc-import>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Primary · stacked. Default in every square and centred context.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);height:220px;display:flex;align-items:center;justify-content:center">
+          <dc-import name="LogoLockup" layout="horizontal" size="46" ink="#964B34" accent="#D9A03C" gsw="5.5" hint-size="280px,60px"></dc-import>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Horizontal · for headers, footers, and wide sign-offs. THE is dropped.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);height:220px;display:flex;align-items:center;justify-content:center">
+          <div style="display:flex;align-items:center;color:#964B34">
+            <span style="font-family:Satoshi,sans-serif;font-weight:700;font-size:46px;letter-spacing:-0.03em;padding-right:0.18em">Cup</span>
+            <span style="font-family:Saira,sans-serif;font-weight:500;font-size:36px;letter-spacing:0.13em;text-transform:uppercase">Index</span>
+          </div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Wordmark only · running text, legal lines, and sizes under 20px cap height.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);height:220px;display:flex;align-items:center;justify-content:center">
+          <div style="width:132px">
+            <dc-import name="RadarMark" ink="#964B34" accent="#D9A03C" sw="4" fillOpacity="0.16" gridOpacity="0.34" hint-size="132px,132px"></dc-import>
+          </div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Mark only · avatars, favicons, stamps, and any circular crop.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px;border-top:1px solid rgba(150,75,52,0.22);padding-top:20px;margin-top:auto">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">Rules</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 32px;font-size:13.5px;line-height:1.5">
+        <div>Only one lockup per surface. Never pair the mark with a stacked lockup.</div>
+        <div>Never re-letterspace, re-weight, or re-set the wordmark by hand.</div>
+        <div>The mark may appear alone; the wordmark may appear alone. Nothing else may join them.</div>
+        <div>The glyph substitution is not optional in the stacked and horizontal lockups.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="05 Clear space" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>04 · Clear space, scale &amp; misuse</div><div style="opacity:0.55">05</div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);padding:26px;display:flex;align-items:center;justify-content:center">
+          <div style="border:1px dashed rgba(193,98,45,0.7);padding:44px">
+            <dc-import name="LogoLockup" layout="stacked" size="58" ink="#964B34" accent="#D9A03C" gsw="5" hint-size="200px,140px"></dc-import>
+          </div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Clear space = the cap height of Cup on all four sides. Nothing enters it.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);padding:26px;display:flex;align-items:flex-end;justify-content:center;gap:22px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+            <div style="width:88px;height:88px;background:#964B34;display:flex;align-items:center;justify-content:center;padding:14px"><dc-import name="RadarMark" ink="#F1E7C4" accent="#D9A03C" sw="4.5" fillOpacity="0.2" gridOpacity="0.2" hint-size="100%,100%"></dc-import></div>
+            <div style="font-family:Saira,sans-serif;font-size:9.5px;letter-spacing:0.2em">88</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+            <div style="width:56px;height:56px;background:#964B34;display:flex;align-items:center;justify-content:center;padding:9px"><dc-import name="RadarMark" ink="#F1E7C4" accent="#D9A03C" sw="5.5" fillOpacity="0.18" gridOpacity="0.12" hint-size="100%,100%"></dc-import></div>
+            <div style="font-family:Saira,sans-serif;font-size:9.5px;letter-spacing:0.2em">56</div>
+          </div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px">
+            <div style="width:32px;height:32px;background:#964B34;display:flex;align-items:center;justify-content:center;padding:5px"><dc-import name="RadarMark" ink="#F1E7C4" accent="#D9A03C" sw="7" fillOpacity="0.18" gridOpacity="0" hint-size="100%,100%"></dc-import></div>
+            <div style="font-family:Saira,sans-serif;font-size:9.5px;letter-spacing:0.2em">32</div>
+          </div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Below 44px the inner ring and spokes are dropped. Minimum mark: 20px. Minimum stacked lockup: 96px wide.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;margin-top:auto">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">Misuse</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(150,75,52,0.18)">
+        <div style="background:#F1E7C4;padding:15px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#D9A03C;font-family:Saira,sans-serif;font-size:14px">×</span><div style="font-size:13.5px;line-height:1.5">No gradients, shadows, glows, or textures on any element of the mark.</div></div>
+        <div style="background:#F1E7C4;padding:15px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#D9A03C;font-family:Saira,sans-serif;font-size:14px">×</span><div style="font-size:13.5px;line-height:1.5">Never rotate the hexagon to a pointy-top orientation.</div></div>
+        <div style="background:#F1E7C4;padding:15px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#D9A03C;font-family:Saira,sans-serif;font-size:14px">×</span><div style="font-size:13.5px;line-height:1.5">Never fill the data shape solid or raise its opacity above 20%.</div></div>
+        <div style="background:#F1E7C4;padding:15px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#D9A03C;font-family:Saira,sans-serif;font-size:14px">×</span><div style="font-size:13.5px;line-height:1.5">Never set the wordmark in any face other than Satoshi and Saira.</div></div>
+        <div style="background:#F1E7C4;padding:15px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#D9A03C;font-family:Saira,sans-serif;font-size:14px">×</span><div style="font-size:13.5px;line-height:1.5">Never place the logo on a photograph without a solid chestnut or vanilla field.</div></div>
+        <div style="background:#F1E7C4;padding:15px 18px;display:flex;gap:12px;align-items:baseline"><span style="color:#D9A03C;font-family:Saira,sans-serif;font-size:14px">×</span><div style="font-size:13.5px;line-height:1.5">Never add a coffee cup, steam, bean, or leaf to the system.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="06 Colour" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:30px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>05 · Colour</div><div style="opacity:0.55">06</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="height:190px;background:#F1E7C4;border:1px solid rgba(150,75,52,0.2)"></div>
+        <div style="display:flex;flex-direction:column;gap:4px;font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase">
+          <div style="font-weight:600">Vanilla</div><div style="opacity:0.7">#F1E7C4</div><div style="opacity:0.7">241 231 196</div><div style="opacity:0.7">Ground · 70%</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="height:190px;background:#964B34"></div>
+        <div style="display:flex;flex-direction:column;gap:4px;font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase">
+          <div style="font-weight:600">Chestnut</div><div style="opacity:0.7">#964B34</div><div style="opacity:0.7">150 75 52</div><div style="opacity:0.7">Ink · 25%</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="height:190px;background:#D9A03C"></div>
+        <div style="display:flex;flex-direction:column;gap:4px;font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.18em;text-transform:uppercase">
+          <div style="font-weight:600">Deep honey</div><div style="opacity:0.7">#D9A03C</div><div style="opacity:0.7">217 160 60</div><div style="opacity:0.7">Accent · 5%</div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">Usage ratio</div>
+      <div style="display:flex;height:26px;border:1px solid rgba(150,75,52,0.2)">
+        <div style="flex:70;background:#F1E7C4"></div>
+        <div style="flex:25;background:#964B34"></div>
+        <div style="flex:5;background:#D9A03C"></div>
+      </div>
+      <div style="font-size:13.5px;line-height:1.5;max-width:34em">Deep honey is a measurement colour, not a decoration: it marks data, plotted shapes, vertex dots, scores, and the single most important number on a surface. If more than one element per view is deep honey, one of them is wrong.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">Data tints, chestnut at reduced opacity only</div>
+      <div style="display:flex;gap:1px;background:rgba(150,75,52,0.18)">
+        <div style="flex:1;height:56px;background:rgba(150,75,52,1)"></div>
+        <div style="flex:1;height:56px;background:rgba(150,75,52,0.7)"></div>
+        <div style="flex:1;height:56px;background:rgba(150,75,52,0.45)"></div>
+        <div style="flex:1;height:56px;background:rgba(150,75,52,0.25)"></div>
+        <div style="flex:1;height:56px;background:rgba(150,75,52,0.12)"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-family:Saira,sans-serif;font-size:10px;letter-spacing:0.2em;opacity:0.62">
+        <div>100%</div><div>70%</div><div>45%</div><div>25%</div><div>12%</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;border-top:1px solid rgba(150,75,52,0.22);padding-top:18px;font-size:13.5px;line-height:1.5;margin-top:auto">
+      <div>Vanilla on chestnut and chestnut on vanilla both clear WCAG AA at all sizes. Deep honey on vanilla is for 18px+ only.</div>
+      <div>Deep honey on chestnut is permitted for the mark's data shape, never for body text.</div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="07 Typography" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:30px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>06 · Typography</div><div style="opacity:0.55">07</div>
+    </div>
+    <div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">Primary · Satoshi</div>
+        <div style="font-family:Satoshi,sans-serif;font-weight:700;font-size:56px;letter-spacing:-0.03em;line-height:1.05">Cup, warmth</div>
+        <div style="font-family:Satoshi,sans-serif;font-weight:400;font-size:19px;line-height:1.4;opacity:0.8">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789</div>
+        <div style="font-size:13.5px;line-height:1.5;max-width:34em;margin-top:4px">Regular 400 for body, Medium 500 for UI, Bold 700 for the wordmark and headlines. Headlines track −0.03em; body tracks normal.</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;border-top:1px solid rgba(150,75,52,0.22);padding-top:24px">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">Technical · Saira</div>
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:52px;letter-spacing:0.13em;text-transform:uppercase;line-height:1.05">Index, precision</div>
+      <div style="font-family:Saira,sans-serif;font-weight:400;font-size:19px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.8">ABCDEFGHIJKLMNOPQRSTUVWXYZ 0123456789</div>
+      <div style="font-size:13.5px;line-height:1.5;max-width:34em;margin-top:4px">Uppercase only, tracked 0.13em in the wordmark and 0.2–0.3em in labels. Saira carries every label, axis name, score, and metadata line, never body copy.</div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px;border-top:1px solid rgba(150,75,52,0.22);padding-top:24px;margin-top:auto">
+      <div style="font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.28em;text-transform:uppercase;opacity:0.6">Scale</div>
+      <div style="display:grid;grid-template-columns:auto 1fr auto;gap:12px 28px;font-size:13.5px;line-height:1.5;align-items:baseline">
+        <div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.62">Display</div><div>Satoshi Bold, −0.03em</div><div style="font-family:Saira,sans-serif;font-size:12px;letter-spacing:0.14em">48 / 1.1</div>
+        <div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.62">Heading</div><div>Satoshi Bold, −0.02em</div><div style="font-family:Saira,sans-serif;font-size:12px;letter-spacing:0.14em">28 / 1.2</div>
+        <div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.62">Body</div><div>Satoshi Regular</div><div style="font-family:Saira,sans-serif;font-size:12px;letter-spacing:0.14em">15 / 1.6</div>
+        <div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.62">Score</div><div>Saira Medium, 0.06em</div><div style="font-family:Saira,sans-serif;font-size:12px;letter-spacing:0.14em">40 / 1.0</div>
+        <div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.62">Label</div><div>Saira Medium, 0.28em, uppercase</div><div style="font-family:Saira,sans-serif;font-size:12px;letter-spacing:0.14em">11 / 1.3</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="08 Scoring system" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:28px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>07 · The scorecard</div><div style="opacity:0.55">08</div>
+    </div>
+    <div style="font-size:15px;line-height:1.6;max-width:34em;text-wrap:pretty">The logo's hexagon is fixed. Every café gets its own plot of the same grid, same orientation, same axis order, clockwise from Latte at the right vertex. The data shape is deep honey; the grid is chestnut at 34%.</div>
+    <div style="display:grid;grid-template-columns:1fr 1.15fr;gap:26px;align-items:stretch">
+      <div style="border:1px solid rgba(150,75,52,0.18);padding:30px;display:flex;flex-direction:column;gap:18px;align-items:center;justify-content:center">
+        <div style="width:200px"><dc-import name="RadarMark" ink="#964B34" accent="#D9A03C" sw="3" fillOpacity="0.16" gridOpacity="0.34" hint-size="200px,200px"></dc-import></div>
+        <div style="font-family:Saira,sans-serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62;text-align:center">Latte → Vibe → Food → Price → Location → Repeat, clockwise</div>
+      </div>
+      <div style="border:1px solid rgba(150,75,52,0.18);padding:28px;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start">
+          <div style="display:flex;flex-direction:column;gap:6px">
+            <div style="font-family:Satoshi,sans-serif;font-weight:700;font-size:22px;letter-spacing:-0.02em">Fernweh Coffee</div>
+            <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Sheung Wan · Visited twice</div>
+          </div>
+          <div style="font-family:Saira,sans-serif;font-weight:500;font-size:40px;letter-spacing:0.06em;color:#D9A03C;line-height:1">8.4</div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px">
+          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;width:76px;opacity:0.75">Latte</div><div style="flex:1;height:5px;background:rgba(150,75,52,0.12)"><div style="width:92%;height:5px;background:#D9A03C"></div></div><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.1em;width:26px;text-align:right">9.2</div></div>
+          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;width:76px;opacity:0.75">Vibe</div><div style="flex:1;height:5px;background:rgba(150,75,52,0.12)"><div style="width:78%;height:5px;background:rgba(150,75,52,0.7)"></div></div><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.1em;width:26px;text-align:right">7.8</div></div>
+          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;width:76px;opacity:0.75">Food</div><div style="flex:1;height:5px;background:rgba(150,75,52,0.12)"><div style="width:55%;height:5px;background:rgba(150,75,52,0.7)"></div></div><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.1em;width:26px;text-align:right">5.5</div></div>
+          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;width:76px;opacity:0.75">Price</div><div style="flex:1;height:5px;background:rgba(150,75,52,0.12)"><div style="width:80%;height:5px;background:rgba(150,75,52,0.7)"></div></div><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.1em;width:26px;text-align:right">8.0</div></div>
+          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;width:76px;opacity:0.75">Location</div><div style="flex:1;height:5px;background:rgba(150,75,52,0.12)"><div style="width:70%;height:5px;background:rgba(150,75,52,0.7)"></div></div><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.1em;width:26px;text-align:right">7.0</div></div>
+          <div style="display:flex;align-items:center;gap:14px"><div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;width:76px;opacity:0.75">Repeat</div><div style="flex:1;height:5px;background:rgba(150,75,52,0.12)"><div style="width:85%;height:5px;background:rgba(150,75,52,0.7)"></div></div><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.1em;width:26px;text-align:right">8.5</div></div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10px;letter-spacing:0.2em;text-transform:uppercase;opacity:0.55;border-top:1px solid rgba(150,75,52,0.18);padding-top:14px">Composite = mean of six axes, one decimal, never rounded up</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;border-top:1px solid rgba(150,75,52,0.22);padding-top:18px;font-size:13.5px;line-height:1.5;margin-top:auto">
+      <div>Only the leading number is deep honey. Axis bars stay chestnut so the score remains the single loudest element.</div>
+      <div>Never re-order, rename, or add an axis. Six axes are the product.</div>
+    </div>
+  </section>
+
+  <section class="page" data-screen-label="09 Applications" style="background:#F1E7C4;color:#964B34;padding:64px;box-sizing:border-box;display:flex;flex-direction:column;gap:26px;font-family:Satoshi,sans-serif">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid rgba(150,75,52,0.22);padding-bottom:12px;font-family:Saira,sans-serif;font-weight:500;font-size:11px;letter-spacing:0.3em;text-transform:uppercase">
+      <div>08 · Applications</div><div style="opacity:0.55">09</div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);padding:24px;display:flex;align-items:center;justify-content:center">
+          <div style="width:130px;height:130px;border-radius:50%;background:#D9A03C;display:flex;align-items:center;justify-content:center;padding:26px;box-sizing:border-box"><dc-import name="RadarMark" ink="#F1E7C4" accent="#F1E7C4" sw="5" fillOpacity="0.18" gridOpacity="0.28" hint-size="100%,100%"></dc-import></div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Instagram avatar · mark only, deep honey field</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);padding:24px;display:flex;align-items:center;justify-content:center">
+          <div style="width:130px;height:130px;border-radius:50%;background:#964B34;display:flex;align-items:center;justify-content:center;padding:26px;box-sizing:border-box"><dc-import name="RadarMark" ink="#F1E7C4" accent="#D9A03C" sw="5" fillOpacity="0.2" gridOpacity="0.28" hint-size="100%,100%"></dc-import></div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Alternate avatar · chestnut field, deep honey data</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="border:1px solid rgba(150,75,52,0.18);padding:24px;display:flex;align-items:center;justify-content:center">
+          <div style="width:130px;height:130px;background:#F1E7C4;border:1px solid rgba(150,75,52,0.2);display:flex;align-items:center;justify-content:center;padding:22px;box-sizing:border-box"><dc-import name="RadarMark" ink="#964B34" accent="#964B34" sw="5" fillOpacity="0.1" gridOpacity="0.28" hint-size="100%,100%"></dc-import></div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Stamp · single-colour chestnut, vanilla field</div>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:#964B34;aspect-ratio:9/16;max-height:300px;display:flex;flex-direction:column;justify-content:space-between;padding:26px;box-sizing:border-box">
+          <dc-import name="LogoLockup" layout="horizontal" size="20" ink="#F1E7C4" accent="#D9A03C" gsw="6" hint-size="140px,26px"></dc-import>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <div style="width:96px"><dc-import name="RadarMark" ink="#F1E7C4" accent="#D9A03C" sw="4" fillOpacity="0.22" gridOpacity="0.24" hint-size="96px,96px"></dc-import></div>
+            <div style="font-family:Satoshi,sans-serif;font-weight:700;font-size:22px;color:#F1E7C4;letter-spacing:-0.02em">Fernweh Coffee</div>
+            <div style="display:flex;align-items:baseline;gap:10px"><div style="font-family:Saira,sans-serif;font-weight:500;font-size:34px;color:#D9A03C;letter-spacing:0.06em">8.4</div><div style="font-family:Saira,sans-serif;font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(241,231,196,0.6)">Composite</div></div>
+          </div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Story card · 9:16, horizontal lockup top-left</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="background:#F1E7C4;border:1px solid rgba(150,75,52,0.2);aspect-ratio:9/16;max-height:300px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:26px;box-sizing:border-box">
+          <dc-import name="LogoLockup" layout="stacked" size="44" ink="#964B34" accent="#D9A03C" gsw="5.5" hint-size="160px,110px"></dc-import>
+          <div style="width:56px;height:1px;background:rgba(150,75,52,0.3)"></div>
+          <div style="font-family:Saira,sans-serif;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;opacity:0.62;text-align:center">Index no. 0142 · Hong Kong</div>
+        </div>
+        <div style="font-family:Saira,sans-serif;font-size:10.5px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.62">Cover card · stacked lockup, vanilla field</div>
+      </div>
+    </div>
+    <div style="margin-top:auto;border-top:1px solid rgba(150,75,52,0.22);padding-top:16px;display:flex;justify-content:space-between;font-family:Saira,sans-serif;font-size:10px;letter-spacing:0.24em;text-transform:uppercase;opacity:0.55">
+      <div>The Cup Index · Brand Guidelines v1.0</div><div>End</div>
+    </div>
+  </section>
+
+</doc-page>
+</x-dc>
+</body>
+</html>
