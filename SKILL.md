@@ -31,7 +31,7 @@ A faceless, data-driven cafe index. The voice is dry, precise, unsentimental. Ne
 
 ## For human designers
 
-Everything below is written to be read either way. If you are working in Figma or Canva rather than code, the parts that matter are the palette, the type pairing and its Canva substitutes, the three-slide carousel structure, and the caption format. `reference/brand-guidelines.dc.html` and `reference/logo-sheet.dc.html` open in any browser and show the full system laid out visually. `reference/colour-explorations.dc.html` shows the palettes that were considered and rejected, and why.
+Everything below is written to be read either way. If you are working in Figma or Canva rather than code, the parts that matter are the palette, the type pairing and its Canva substitutes, the three-slide carousel structure, and the caption format. `reference/brand-guidelines.dc.html` and `reference/logo-sheet.dc.html` show the full system laid out visually. They load their own components with JavaScript, so serve the folder over http rather than double-clicking, `python3 -m http.server 8000`, or read them on the published site. `reference/colour-explorations.dc.html` shows the palettes that were considered and rejected, and why.
 
 ## Components (in `components/`)
 
@@ -107,7 +107,7 @@ Bad: "Such a cute spot, we loved it!" Bad anything with an exclamation mark or a
 
 ## Worked examples
 
-`examples/` holds four published review carousels (Islet Coffee Lab, Common Man Coffee Roasters, Marouf Coffee, Manners Matter Ltd) and the three intro posts that launched the account. Open any of them in a browser. They are the fastest way to see the rules applied, including how long venue names are handled and how the adjustment lines are phrased.
+`examples/` holds four published review carousels (Islet Coffee Lab, Common Man Coffee Roasters, Marouf Coffee, Manners Matter Ltd) and the three intro posts that launched the account. Open any of them over a local server, or on the published site. They are the fastest way to see the rules applied, including how long venue names are handled and how the adjustment lines are phrased.
 
 ## Forking this for another brand
 
