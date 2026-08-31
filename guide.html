@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cup Index, the guide</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#964B34; --field:#F1E7C4; --honey:#D9A03C; --honeyDeep:#B5762A; --rule:rgba(150,75,52,0.26); }
+  *{ box-sizing:border-box }
+  body{ margin:0; background:var(--field); color:var(--ink);
+        font-family:Satoshi,system-ui,-apple-system,sans-serif; font-size:18px; line-height:1.62;
+        -webkit-font-smoothing:antialiased }
+  .wrap{ max-width:1180px; margin:0 auto; padding:0 28px 140px; display:flex; gap:56px; align-items:flex-start }
+  main{ flex:1 1 auto; min-width:0; max-width:44em; padding-top:56px }
+  /* masthead */
+  .top{ border-bottom:1px solid var(--rule); padding:22px 0; display:flex; justify-content:space-between;
+        align-items:center; gap:20px; flex-wrap:wrap }
+  .eyebrow{ font-family:Saira,sans-serif; font-weight:500; font-size:12px; letter-spacing:0.34em;
+            text-transform:uppercase; color:var(--honeyDeep) }
+  .top a{ font-family:Saira,sans-serif; font-size:12px; letter-spacing:0.22em; text-transform:uppercase;
+          color:var(--ink); text-decoration:none; opacity:0.75 }
+  .top a:hover{ opacity:1; color:var(--honeyDeep) }
+  /* nav */
+  nav{ position:sticky; top:28px; width:212px; flex:0 0 212px; padding-top:60px }
+  nav .lbl{ font-family:Saira,sans-serif; font-weight:600; font-size:11px; letter-spacing:0.3em;
+            text-transform:uppercase; color:var(--honeyDeep); margin-bottom:14px }
+  nav a{ display:block; font-family:Saira,sans-serif; font-size:12.5px; letter-spacing:0.1em;
+         text-transform:uppercase; color:var(--ink); text-decoration:none; padding:7px 0 7px 12px;
+         border-left:2px solid var(--rule); opacity:0.72 }
+  nav a:hover{ opacity:1; border-left-color:var(--honey); color:var(--honeyDeep) }
+  /* prose */
+  main h1{ font-size:clamp(36px,5vw,54px); font-weight:700; letter-spacing:-0.02em; line-height:1.06; margin:0 0 26px }
+  main h2{ font-family:Saira,sans-serif; font-weight:600; font-size:14px; letter-spacing:0.3em;
+           text-transform:uppercase; color:var(--honeyDeep); margin:64px 0 18px;
+           padding-top:20px; border-top:1px solid var(--rule) }
+  main h3{ font-size:23px; font-weight:700; letter-spacing:-0.01em; margin:36px 0 12px }
+  main p{ margin:0 0 18px; text-wrap:pretty }
+  main ul,main ol{ margin:0 0 20px; padding-left:22px }
+  main li{ margin-bottom:9px }
+  main ul ul,main ol ul{ margin:9px 0 4px }
+  main strong{ font-weight:700 }
+  main a{ color:var(--honeyDeep); text-decoration:none; border-bottom:1px solid rgba(181,118,42,0.45) }
+  main a:hover{ color:var(--ink) }
+  code{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.86em;
+        background:rgba(150,75,52,0.09); padding:2px 6px; border-radius:3px; white-space:nowrap }
+  pre{ background:var(--ink); color:var(--field); padding:22px 24px; overflow-x:auto; margin:0 0 22px;
+       border-radius:4px; line-height:1.65 }
+  pre code{ background:none; padding:0; font-size:14px; white-space:pre; color:inherit }
+  hr{ border:0; border-top:1px solid var(--rule); margin:44px 0 }
+  table{ border-collapse:collapse; width:100%; margin:0 0 22px; font-size:16px }
+  th,td{ text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule) }
+  th{ font-family:Saira,sans-serif; font-weight:600; font-size:11px; letter-spacing:0.2em;
+      text-transform:uppercase; color:var(--honeyDeep) }
+  /* swatch row */
+  .sw{ display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin:0 0 40px }
+  .sw div{ padding:14px; border:1px solid var(--rule) }
+  .sw i{ display:block; height:44px; margin:9px 0 }
+  .sw span{ font-family:Saira,sans-serif; font-size:12px; letter-spacing:0.12em }
+  .note{ border-left:3px solid var(--honey); padding:14px 0 14px 18px; margin:0 0 30px; font-size:16.5px }
+  footer{ font-family:Saira,sans-serif; font-size:12px; letter-spacing:0.22em; text-transform:uppercase;
+          color:rgba(150,75,52,0.65); border-top:1px solid var(--rule); padding-top:20px; margin-top:70px }
+  @media(max-width:900px){ .wrap{ display:block } nav{ position:static; width:auto; padding-top:34px }
+    nav a{ display:inline-block; margin-right:6px } main{ padding-top:34px } .sw{ grid-template-columns:1fr } }
+</style>
+</head>
+<body>
+<div class="top" style="padding-left:28px;padding-right:28px">
+  <div class="eyebrow">The Cup Index / the guide</div>
+  <div style="display:flex;gap:22px;flex-wrap:wrap">
+    <a href="index.html">Home</a>
+    <a href="reference/brand-guidelines.dc.html">Visual guidelines</a>
+    <a href="templates/review-carousel.dc.html">Template</a>
+    <a href="https://github.com/socialballerina/thecupindexdesignguide">GitHub</a>
+  </div>
+</div>
+
+<div class="wrap">
+  <nav><div class="lbl">On this page</div><div id="toc"></div></nav>
+  <main>
+    <div class="sw">
+      <div><span class="eyebrow">Ink</span><i style="background:#964B34"></i><span>#964B34 chestnut</span></div>
+      <div><span class="eyebrow">Field</span><i style="background:#F1E7C4;border:1px solid var(--rule)"></i><span>#F1E7C4 vanilla</span></div>
+      <div><span class="eyebrow">Data</span><i style="background:#D9A03C"></i><span>#D9A03C honey</span></div>
+    </div>
+    <div id="body"><p style="opacity:0.6">Loading the guide…</p></div>
+    <div id="caption"></div>
+    <footer>Latte · Vibe · Food · Price · Location · Repeatability</footer>
+  </main>
+</div>
+
+<script>
+/* Tiny markdown renderer. Single source of truth stays SKILL.md, this just paints it. */
+function esc(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function inline(s){
+  return esc(s)
+    .replace(/`([^`]+)`/g,'<code>$1</code>')
+    .replace(/\*\*([^*]+)\*\*/g,'<strong>$1</strong>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g,'<a href="$2">$1</a>');
+}
+function md(src){
+  src = src.replace(/^---\n[\s\S]*?\n---\n/,'');           // drop YAML frontmatter
+  var lines = src.split('\n'), out = [], i = 0;
+  function closeLists(depth){ while(stack.length>depth){ out.push('</'+stack.pop()+'>'); } }
+  var stack = [];
+  while(i < lines.length){
+    var ln = lines[i];
+    if(/^```/.test(ln)){                                    // fenced code
+      closeLists(0); i++; var buf = [];
+      while(i<lines.length && !/^```/.test(lines[i])){ buf.push(lines[i]); i++; }
+      i++; out.push('<pre><code>'+esc(buf.join('\n'))+'</code></pre>'); continue;
+    }
+    if(/^\s*$/.test(ln)){ i++; continue; }
+    if(/^#{1,4}\s/.test(ln)){                               // heading
+      closeLists(0);
+      var lvl = ln.match(/^#+/)[0].length, txt = ln.replace(/^#+\s*/,'');
+      var id = txt.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+      out.push('<h'+lvl+' id="'+id+'">'+inline(txt)+'</h'+lvl+'>'); i++; continue;
+    }
+    if(/^\|/.test(ln)){                                     // table
+      closeLists(0); var rows = [];
+      while(i<lines.length && /^\|/.test(lines[i])){ rows.push(lines[i]); i++; }
+      var cells = function(r){ return r.replace(/^\||\|$/g,'').split('|').map(function(c){return c.trim();}); };
+      var head = cells(rows[0]), sep = rows[1] && /^[\s|:-]+$/.test(rows[1]);
+      var t = '<table>';
+      if(sep && head.some(function(h){return h;})){
+        t += '<tr>'+head.map(function(h){return '<th>'+inline(h)+'</th>';}).join('')+'</tr>';
+      }
+      rows.slice(sep?2:1).forEach(function(r){
+        t += '<tr>'+cells(r).map(function(c){return '<td>'+inline(c)+'</td>';}).join('')+'</tr>';
+      });
+      out.push(t+'</table>'); continue;
+    }
+    var m = ln.match(/^(\s*)([-*]|\d+\.)\s+(.*)$/);
+    if(m){                                                  // list item, one nesting level
+      var depth = m[1].length >= 2 ? 2 : 1;
+      var tag = /\d/.test(m[2]) ? 'ol' : 'ul';
+      while(stack.length > depth) out.push('</'+stack.pop()+'>');
+      if(stack.length < depth){ out.push('<'+tag+'>'); stack.push(tag); }
+      out.push('<li>'+inline(m[3])+'</li>'); i++; continue;
+    }
+    if(/^(---|===)\s*$/.test(ln)){ closeLists(0); out.push('<hr>'); i++; continue; }
+    var para = [];                                          // paragraph
+    while(i<lines.length && !/^\s*$/.test(lines[i]) && !/^(#{1,4}\s|```|\||\s*([-*]|\d+\.)\s)/.test(lines[i])){
+      para.push(lines[i]); i++;
+    }
+    if(para.length){ if(stack.length){ out.push(inline(para.join(' '))); } else { out.push('<p>'+inline(para.join(' '))+'</p>'); } }
+    else { i++; }
+  }
+  closeLists(0);
+  return out.join('\n');
+}
+function toc(){
+  var t = document.getElementById('toc'), hs = document.querySelectorAll('main h2');
+  t.innerHTML = Array.prototype.map.call(hs, function(h){
+    return '<a href="#'+h.id+'">'+h.textContent+'</a>';
+  }).join('');
+}
+var FALLBACK = '<div class="note"><strong>This page needs to be served over http, not opened from disk.</strong>'
+  + ' Your browser blocks local file reads, so the guide text could not load. Either read it on the'
+  + ' <a href="https://socialballerina.github.io/thecupindexdesignguide/guide.html">published site</a>,'
+  + ' read <a href="https://github.com/socialballerina/thecupindexdesignguide/blob/main/SKILL.md">SKILL.md on GitHub</a>,'
+  + ' or run <code>python3 -m http.server</code> in this folder and open'
+  + ' <code>http://localhost:8000/guide.html</code>.</div>';
+Promise.all([
+  fetch('SKILL.md').then(function(r){ if(!r.ok) throw 0; return r.text(); }),
+  fetch('reference/caption-format.md').then(function(r){ return r.ok ? r.text() : ''; }).catch(function(){ return ''; })
+]).then(function(res){
+  document.getElementById('body').innerHTML = md(res[0]);
+  if(res[1]) document.getElementById('caption').innerHTML =
+    '<h2 id="caption-reference">Caption reference, with a worked example</h2>' + md(res[1]).replace(/<h1[^>]*>[\s\S]*?<\/h1>/,'');
+  toc();
+}).catch(function(){
+  document.getElementById('body').innerHTML = FALLBACK;
+});
+</script>
+</body>
+</html>

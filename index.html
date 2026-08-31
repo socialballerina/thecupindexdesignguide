@@ -3,41 +3,134 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Cup Index, design skill</title>
+<title>The Cup Index, design guide</title>
+<meta name="description" content="The brand and content system for The Cup Index, a faceless, data-driven cafe index. Six axes, one radar, three slides.">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,700&display=swap" rel="stylesheet">
+<link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#964B34; --field:#F1E7C4; --honey:#D9A03C; --honeyDeep:#B5762A; --rule:rgba(150,75,52,0.26); }
+  *{ box-sizing:border-box }
+  body{ margin:0; background:var(--field); color:var(--ink);
+        font-family:Satoshi,system-ui,-apple-system,sans-serif; -webkit-font-smoothing:antialiased }
+  .wrap{ max-width:920px; margin:0 auto; padding:64px 28px 120px; display:flex; flex-direction:column; gap:60px }
+  .eyebrow{ font-family:Saira,sans-serif; font-weight:600; font-size:12px; letter-spacing:0.34em;
+            text-transform:uppercase; color:var(--honeyDeep) }
+  h1{ margin:0; font-size:clamp(40px,7vw,60px); font-weight:700; letter-spacing:-0.025em; line-height:1.02 }
+  .lede{ margin:0; font-size:20px; line-height:1.55; max-width:33em; text-wrap:pretty }
+  h2{ font-family:Saira,sans-serif; font-weight:600; font-size:13px; letter-spacing:0.32em;
+      text-transform:uppercase; color:var(--honeyDeep); margin:0 0 20px;
+      padding-top:18px; border-top:1px solid var(--rule) }
+  /* the six axes strip */
+  .axes{ display:flex; flex-wrap:wrap; gap:8px }
+  .axes span{ font-family:Saira,sans-serif; font-size:12px; font-weight:500; letter-spacing:0.2em;
+              text-transform:uppercase; border:1px solid var(--rule); padding:8px 13px }
+  /* swatches */
+  .sw{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px }
+  .sw div{ border:1px solid var(--rule); padding:18px }
+  .sw i{ display:block; height:52px; margin:11px 0 }
+  .sw b{ display:block; font-family:Saira,sans-serif; font-size:12.5px; font-weight:500; letter-spacing:0.12em }
+  .sw em{ display:block; font-style:normal; font-size:13px; opacity:0.7; margin-top:3px }
+  /* route cards */
+  .routes{ display:grid; grid-template-columns:repeat(auto-fit,minmax(232px,1fr)); gap:14px }
+  .card{ border:1px solid var(--rule); padding:22px; display:flex; flex-direction:column; gap:9px;
+         text-decoration:none; color:var(--ink); transition:border-color .15s, background .15s }
+  .card:hover{ border-color:var(--honey); background:rgba(217,160,60,0.07) }
+  .card .n{ font-family:Saira,sans-serif; font-size:11px; letter-spacing:0.26em; color:var(--honeyDeep);
+            text-transform:uppercase }
+  .card .t{ font-size:19px; font-weight:700; line-height:1.25 }
+  .card .d{ font-size:15px; line-height:1.5; opacity:0.82 }
+  /* link lists */
+  .links{ display:flex; flex-direction:column }
+  .links a{ display:flex; justify-content:space-between; align-items:baseline; gap:16px;
+            color:var(--ink); text-decoration:none; border-bottom:1px solid var(--rule);
+            padding:14px 0; font-size:18px }
+  .links a:last-child{ border-bottom:0 }
+  .links a:hover{ color:var(--honeyDeep) }
+  .links a .k{ font-family:Saira,sans-serif; font-size:11px; letter-spacing:0.22em; text-transform:uppercase;
+               opacity:0.6; white-space:nowrap }
+  .note{ border-left:3px solid var(--honey); padding:14px 0 14px 18px; font-size:16px; line-height:1.55;
+         max-width:38em }
+  code{ font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:0.88em;
+        background:rgba(150,75,52,0.1); padding:2px 6px; border-radius:3px }
+  footer{ font-family:Saira,sans-serif; font-size:12px; letter-spacing:0.22em; text-transform:uppercase;
+          color:rgba(150,75,52,0.65); border-top:1px solid var(--rule); padding-top:20px }
+  @media(max-width:640px){ .sw{ grid-template-columns:1fr } }
+</style>
 </head>
-<body style="margin:0;background:#F1E7C4;color:#964B34;font-family:Satoshi,system-ui,sans-serif">
-<div style="max-width:840px;margin:0 auto;padding:72px 32px 120px;display:flex;flex-direction:column;gap:48px">
+<body>
+<div class="wrap">
 
-  <div style="display:flex;flex-direction:column;gap:20px">
-    <div style="font-family:Saira,sans-serif;font-weight:500;font-size:13px;letter-spacing:0.4em;text-transform:uppercase;color:#B5762A">Design skill</div>
-    <h1 style="margin:0;font-size:52px;font-weight:700;letter-spacing:-0.02em;line-height:1.05">The Cup Index</h1>
-    <p style="margin:0;font-size:20px;line-height:1.55;max-width:34em;text-wrap:pretty">A faceless, data-driven cafe index. Six axes, one scorecard, no vibes-only verdicts. This repository holds the whole system: palette, type pairing, the radar components, a fill-in carousel template, and four published reviews as worked examples.</p>
-  </div>
-
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
-    <div style="border:1px solid rgba(150,75,52,0.28);padding:20px"><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#B5762A">Ink</div><div style="height:56px;background:#964B34;margin:12px 0"></div><div style="font-family:Saira,sans-serif;font-size:13px;letter-spacing:0.1em">#964B34</div></div>
-    <div style="border:1px solid rgba(150,75,52,0.28);padding:20px"><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#B5762A">Field</div><div style="height:56px;background:#F1E7C4;border:1px solid rgba(150,75,52,0.2);margin:12px 0"></div><div style="font-family:Saira,sans-serif;font-size:13px;letter-spacing:0.1em">#F1E7C4</div></div>
-    <div style="border:1px solid rgba(150,75,52,0.28);padding:20px"><div style="font-family:Saira,sans-serif;font-size:11px;letter-spacing:0.24em;text-transform:uppercase;color:#B5762A">Data</div><div style="height:56px;background:#D9A03C;margin:12px 0"></div><div style="font-family:Saira,sans-serif;font-size:13px;letter-spacing:0.1em">#D9A03C</div></div>
-  </div>
-
-  <div style="display:flex;flex-direction:column;gap:14px">
-    <div style="font-family:Saira,sans-serif;font-weight:600;font-size:13px;letter-spacing:0.34em;text-transform:uppercase;color:#B5762A">Open</div>
-    <div style="display:flex;flex-direction:column;gap:10px;font-size:18px">
-      <a href="SKILL.md" style="color:#964B34;text-decoration:none;border-bottom:1px solid rgba(150,75,52,0.3);padding:10px 0">SKILL.md, the brief itself</a>
-      <a href="reference/brand-guidelines.dc.html" style="color:#964B34;text-decoration:none;border-bottom:1px solid rgba(150,75,52,0.3);padding:10px 0">Brand guidelines</a>
-      <a href="reference/logo-sheet.dc.html" style="color:#964B34;text-decoration:none;border-bottom:1px solid rgba(150,75,52,0.3);padding:10px 0">Logo sheet, every variant</a>
-      <a href="reference/colour-explorations.dc.html" style="color:#964B34;text-decoration:none;border-bottom:1px solid rgba(150,75,52,0.3);padding:10px 0">Colour explorations</a>
-      <a href="templates/review-carousel.dc.html" style="color:#964B34;text-decoration:none;border-bottom:1px solid rgba(150,75,52,0.3);padding:10px 0">Review carousel template</a>
-      <a href="examples/review-001-islet.dc.html" style="color:#964B34;text-decoration:none;border-bottom:1px solid rgba(150,75,52,0.3);padding:10px 0">Example, Islet Coffee Lab</a>
-      <a href="examples/review-003-marouf.dc.html" style="color:#964B34;text-decoration:none;border-bottom:1px solid rgba(150,75,52,0.3);padding:10px 0">Example, Marouf Coffee</a>
-      <a href="examples/intro-posts.dc.html" style="color:#964B34;text-decoration:none;padding:10px 0">The three intro posts</a>
+  <header style="display:flex;flex-direction:column;gap:20px">
+    <div class="eyebrow">Brand and content guide</div>
+    <h1>The Cup Index</h1>
+    <p class="lede">A faceless, data-driven cafe index. Every cafe is scored on the same six axes, plotted on a hexagonal radar, and published as three slides. This is the whole system: the colours, the type, the logo, the components, a fill-in template, and four published reviews to copy from.</p>
+    <div class="axes">
+      <span>Latte</span><span>Vibe</span><span>Food</span><span>Price</span><span>Location</span><span>Repeatability</span>
     </div>
-  </div>
+  </header>
 
-  <div style="font-family:Saira,sans-serif;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(150,75,52,0.7);border-top:1px solid rgba(150,75,52,0.3);padding-top:20px">Latte · Vibe · Food · Price · Location · Repeatability</div>
+  <section>
+    <h2>Start here</h2>
+    <div class="routes">
+      <a class="card" href="guide.html">
+        <div class="n">Read</div>
+        <div class="t">The guide</div>
+        <div class="d">Every rule in one readable page. The palette, the type, the scoring, the voice.</div>
+      </a>
+      <a class="card" href="reference/brand-guidelines.dc.html">
+        <div class="n">Look</div>
+        <div class="t">Visual guidelines</div>
+        <div class="d">The system laid out visually. Keep it open while you design.</div>
+      </a>
+      <a class="card" href="templates/review-carousel.dc.html">
+        <div class="n">Build</div>
+        <div class="t">Carousel template</div>
+        <div class="d">Three empty slides at 1080 × 1350. Swap two photos and the scores.</div>
+      </a>
+      <a class="card" href="examples/review-001-islet.dc.html">
+        <div class="n">Copy</div>
+        <div class="t">A finished review</div>
+        <div class="d">Islet Coffee Lab, published. The fastest way to see the rules applied.</div>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Three colours, never a fourth</h2>
+    <div class="sw">
+      <div><div class="eyebrow">Ink</div><i style="background:#964B34"></i><b>#964B34</b><em>Chestnut</em></div>
+      <div><div class="eyebrow">Field</div><i style="background:#F1E7C4;border:1px solid var(--rule)"></i><b>#F1E7C4</b><em>Vanilla</em></div>
+      <div><div class="eyebrow">Data</div><i style="background:#D9A03C"></i><b>#D9A03C</b><em>Deep honey, #B5762A on light</em></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Everything in the guide</h2>
+    <div class="links">
+      <a href="guide.html"><span>The guide, all the rules rendered as a web page</span><span class="k">Read</span></a>
+      <a href="reference/brand-guidelines.dc.html"><span>Brand guidelines, the visual system</span><span class="k">Reference</span></a>
+      <a href="reference/logo-sheet.dc.html"><span>Logo sheet, every variant and size test</span><span class="k">Reference</span></a>
+      <a href="reference/colour-explorations.dc.html"><span>Colour explorations, what was rejected and why</span><span class="k">Reference</span></a>
+      <a href="guide.html#caption-reference"><span>Caption format, with a worked example</span><span class="k">Reference</span></a>
+      <a href="templates/review-carousel.dc.html"><span>Review carousel template, ready to refill</span><span class="k">Template</span></a>
+      <a href="examples/review-001-islet.dc.html"><span>Review 001, Islet Coffee Lab</span><span class="k">Example</span></a>
+      <a href="examples/review-002-common-man.dc.html"><span>Review 002, Common Man Coffee Roasters</span><span class="k">Example</span></a>
+      <a href="examples/review-003-marouf.dc.html"><span>Review 003, Marouf Coffee</span><span class="k">Example</span></a>
+      <a href="examples/review-004-manners-matter.dc.html"><span>Review 004, Manners Matter Ltd</span><span class="k">Example</span></a>
+      <a href="examples/intro-posts.dc.html"><span>The three posts that launched the account</span><span class="k">Example</span></a>
+      <a href="https://github.com/socialballerina/thecupindexdesignguide"><span>The repository, logo files and the skill file</span><span class="k">GitHub</span></a>
+    </div>
+  </section>
+
+  <section>
+    <h2>Making one yourself</h2>
+    <p class="note"><strong>Designing by hand</strong>, in Canva or Figma. Open the visual guidelines and the logo sheet, take the logo files from <code>assets/</code>, and build three 1080 × 1350 slides. Canva substitutes for the type are Poppins for Cup and Archivo for Index.</p>
+    <p class="note"><strong>Designing in code.</strong> Copy the <code>templates/</code> folder, drop your two photos over the placeholders keeping the filenames, then replace the venue name, the index number and the six scores. Preview it over a local server, <code>python3 -m http.server 8000</code>, because browsers block local file reads and these pages load their own components.</p>
+    <p class="note"><strong>Handing it to an AI assistant.</strong> <code>SKILL.md</code> is a skill file. Clone the repo into your assistant's skills folder, or paste the file in as a brief. It stands alone.</p>
+  </section>
+
+  <footer>Six axes · Scored 0 to 10 · Composite is the plain mean · No em dashes · No fourth colour</footer>
 </div>
 </body>
 </html>
